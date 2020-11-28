@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Halon Stats</title>
+  <meta name="description" content="A page to view and monitor halon stats">
+  <meta name="author" content="Gustaf Järgen">  
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <div id="graph"></div>
+  <script src="https://unpkg.com/lodash@4.17.20/lodash.min.js"></script>
+  <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://unpkg.com/flot@4.2.1/dist/es5/jquery.flot.js"></script>
+
+  <!-- Libraries to handle and plot rrd files -->
+  <script src="/js/rrd/binaryXHR.js"></script>
+  <script src="/js/rrd/rrdFile.js"></script>
+  <script src="/js/rrd/rrdFlot.js"></script>
+  <script src="/js/rrd/rrdFlotSupport.js"></script>
+  <script src="/js/rrd/rrdFlotAsync.js"></script>
+  
+  <!-- Main handling of plotting -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

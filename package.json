@@ -1,0 +1,34 @@
+{
+  "name": "halon-graph",
+  "version": "1.0.0",
+  "description": "A small app to show mail history from a Halon mail server",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "NODE_ENV=development npm-run-all server",
+    "watch": "nodemon",
+    "server": "babel-node ./src/app.js",
+    "start": "npm run prod",
+    "clean": "rimraf dist",
+    "build": "babel ./src --out-dir dist --copy-files",
+    "prod": "NODE_ENV=production npm-run-all clean build server:prod",
+    "server:prod": "node ./dist/app.js"
+  },
+  "keywords": ["halon", "flot", "graph", "mail"],
+  "author": "Gustaf Järgren",
+  "license": "MIT",
+  "dependencies": {
+    "Buffer": "^0.0.0",
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
+    "nodemon": "^2.0.6"
+  }
+}
